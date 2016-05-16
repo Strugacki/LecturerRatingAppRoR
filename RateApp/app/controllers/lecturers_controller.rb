@@ -1,6 +1,7 @@
 class LecturersController < ApplicationController
   before_action :set_lecturer, only: [:show, :edit, :update, :destroy]
-
+    before_action :authenticate_user!, except: [:index, :show]
+    
   # GET /lecturers
   # GET /lecturers.json
   def index
@@ -14,7 +15,7 @@ class LecturersController < ApplicationController
 
   # GET /lecturers/new
   def new
-    @lecturer = Lecturer.new
+      @lecturer = current_user.lecturers.build
   end
 
   # GET /lecturers/1/edit
@@ -24,7 +25,7 @@ class LecturersController < ApplicationController
   # POST /lecturers
   # POST /lecturers.json
   def create
-    @lecturer = Lecturer.new(lecturer_params)
+    @lecturer = current_user.lecturers.build(lecturer_params)
 
     respond_to do |format|
       if @lecturer.save
