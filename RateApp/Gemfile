@@ -46,4 +46,4 @@ group :development do
 end
 
 gem 'devise', '~> 4.1.1'
-gem 'paperclip', github: 'thoughtbot/paperclip'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
