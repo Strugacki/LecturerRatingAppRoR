@@ -16,7 +16,7 @@
   <tbody>
     <% @lecturers.each do |lecturer| %>
       <tr>
-	<td><%= image_tag lecturer.image.url(:medium) %></td>
+	<td><%= lecturer.image.url(:medium) %></td>
         <td><%= lecturer.firstname %></td>
         <td><%= lecturer.lastname %></td>
         <td><%= lecturer.age %></td>
