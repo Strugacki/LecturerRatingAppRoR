@@ -2,7 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @lecturer.image.url(:medium) %>
+<%= image_tag @lecturerr.image.url(:medium) %>
 
 <p>
   <strong>Firstname:</strong>
