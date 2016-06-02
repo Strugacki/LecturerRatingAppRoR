@@ -1,5 +1,5 @@
 # LecturerRatingAppRoR
 
-Autorzy: Marcin Hallman, Sławomir Rzeppa, Adam Chleba, Michał Górski
+Autorzy: Marcin Hallman, Sławomir Rzeppa, Adam Chlebba, Michał Górski
 
-Proponowany termin oddania pracy: 30 Maja
+Proponowany termin oddania pracy: 10 czerwca
