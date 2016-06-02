@@ -1,28 +1,38 @@
-
-
-<p id="notice"><%= notice %></p>
-
-<%= image_tag @lecturerr.image.url(:medium) %>
-
-<p>
-  <strong>Firstname:</strong>
-  <%= @lecturer.firstname %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @lecturer.lastname %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @lecturer.age %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @lecturer.rating %>
-</p>
-
+<div class="panel panel-deafult">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag @lecturer.image.url(:medium) %>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+	      <tr>
+		<td><strong>Firstname:</strong></td>
+		<td><%= @lecturer.firstname %></td>
+	      </tr>
+	      <tr>
+		<td><strong>Lastname:</strong></td>
+  		<td><%= @lecturer.lastname %></td>
+	      </tr>
+	      <tr>
+		<td><strong>Age:</strong></td>
+ 		<td><%= @lecturer.age %></td>
+	      </tr>
+	      <tr>
+		<td><strong>Rating:</strong></td>
+  		<td><%= @lecturer.rating %></td>
+	      </tr>
+            <tbody>
+          </table>
+        </div>
+      </div>
 <%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
-<%= link_to 'Back', lecturers_path %>
+  <%= link_to 'Back', lecturers_path %>
+    </div>
+
+  </div>
+  
+</div>
+
+
+

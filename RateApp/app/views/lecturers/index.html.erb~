@@ -2,7 +2,7 @@
   <%= @lecturers.each do |lecturer| %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-	<<%= link_to (image_tag lecturer.image.url(:medium), class: 'image'), lecturer %>
+	<%= link_to (image_tag lecturer.image.url(:medium), class: 'image'), lecturer %>
       </div>
     </div>
   <% end %>

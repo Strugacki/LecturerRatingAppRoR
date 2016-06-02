@@ -1,3 +1,12 @@
+<% if !user_signed_in? %>
+ <div class="jumbotron">
+  <h1>Your Favorite Lecturers Revived</h1>
+  <p> askdgbskfgbakmsgbasdfgbkabgkladbgklbdgklklbklkldfgadfg</p>
+  <p><%= link_to "Sign Up To Write A Reviev", new_user_registration_path, class: "btn-primary btn-lg" %> </p>
+ </div>
+<% end %>
+
+
 <div class="row">
   <%= @lecturers.each do |lecturer| %>
     <div class="col-sm-6 col-md-3">
