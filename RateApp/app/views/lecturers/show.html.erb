@@ -1,3 +1,4 @@
+
 <div class="panel panel-deafult">
   <div class="panel-body">
     <div class="row">
@@ -37,7 +38,7 @@
           <% else %>
           <% @reviews.each do |review| %>
             <div class="reviews">
-            <p><%= review.rating %></p>
+            <div class="star-rating" data-score= <%= review.rating %> ></div>
             <p><%= review.comment %></p>
             </div>
             <% end %>
@@ -48,6 +49,15 @@
 </div>
       <%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
       <%= link_to 'Back', lecturers_path %>
+      <script>
+$('.star-rating').raty( {
+  path: '/assets/',
+  readOnly: true,
+  score: function() {
+    return $(this).attr('data-score');
+  }
+});
+      </script>
 
 
 
