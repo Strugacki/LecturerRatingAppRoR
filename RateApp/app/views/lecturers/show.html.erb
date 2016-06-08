@@ -27,11 +27,28 @@
           <%= link_to "Write a review", new_lecturer_review_path(@lecturer) %>
         </div>
       </div>
+      <div class="col-md-7 col-md-offset-1">
+        <h1 class="review_title"><%= @lecturer.firstname %></h1>
+        <p><%= @lecturer.rating %></p>
+
+        <% if @reviews.blank? %>
+          <h3>No reviews just yet.</h3>
+          <%= link_to 'Write Review', new_lecturer_review_path(@lecturer), class: "btn btn-danger" %>
+          <% else %>
+          <% @reviews.each do |review| %>
+            <div class="reviews">
+            <p><%= review.rating %></p>
+            <p><%= review.comment %></p>
+            </div>
+            <% end %>
+            <% end %>
+            </div>
     </div>
+      </div>
+</div>
       <%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
       <%= link_to 'Back', lecturers_path %>
-  </div>
-</div>
+
 
 
 
