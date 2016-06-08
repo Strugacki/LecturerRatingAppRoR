@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :reviews
   devise_for :users
-  resources :lecturers
+  resources :lecturers do
+    resources :reviews, except: [:show, :index]
+  end
     
     root 'lecturers#index'
   # The priority is based upon order of creation: first created -> highest priority.
