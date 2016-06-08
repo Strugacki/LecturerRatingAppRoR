@@ -1,28 +1,46 @@
-== README
+### Projekt na egzamin: Flatmate Helper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Zespół SMMA
 
-Things you may want to cover:
+  * Sławomir Rzeppa
+  * Marcin Hallman
+  * Michał Górski
+  * Adam Chlebba
 
-* Ruby version
+1. Opis projektu
+  Aplikacja LecturerRating jest przeznaczona dla studentów i uczniów, którzy chcą ocenić swojego wykładowce bądź nauczyciela.
 
-* System dependencies
+1. Podział pracy
 
-* Configuration
+  - Sławomir Rzeppa
+    - model nauczyciela
+    - model użytkownika
+    - logowanie + rejestracja
+    - stworzenie bazy danych i wszystkich relacji sqlite3
+    - migracja bazy danych do postgresql, by aplikacja działała na heroku
 
-* Database creation
+  - Marcin Hallman
+    - poprawianie bugow i błędów w aplikacji
+    - model przeglądu nauczyciela
+    - widok przeglądu nauczyciela
+    - stworzenie logiki która ocenia nauczyciela
 
-* Database initialization
+  - Michał Górski
+    - stworzenie oceniania
+    - dodanie systemu gwiazdkowego oceniania
+    - dodanie jquery do projektu
+    - stworzenie przeglądania nauczycieli
+    - dodanie paperclipa do projektu
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - Adam Chlebba
+    - dodanie bootstrapa do projektu
+    - dodanie widoków, nagłówków i stopek do projektu
+    - stylowanie projektu
+    - testowanie manualne działania aplikacji
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Informacje 
+
+Wersja Ruby|Wersja Rails|Baza danych|
+|---|---|---|
+|2.3.0p0|5.0.0.rc1|PostgreSQL|
