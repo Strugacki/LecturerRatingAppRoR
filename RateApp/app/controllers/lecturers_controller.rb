@@ -11,6 +11,7 @@ class LecturersController < ApplicationController
   # GET /lecturers/1
   # GET /lecturers/1.json
   def show
+    @reviews = Review.where(lecturer_id: @lecturer.id).order("created_at DESC")
   end
 
   # GET /lecturers/new
